@@ -1,0 +1,46 @@
+.vertical { 
+    border-left: 10px solid green; 
+    height: 9rem; 
+    float: right;
+} 
+@media only screen and (max-width: 600px) {
+    .vertical{
+        display: none; 
+    }
+  }
+.about-header-text{
+    color: rgb(28, 59, 11);
+}
+.btn-below-header-text{
+    border-radius: 2rem;
+    font-size: larger;
+}
+.description{
+    margin-left: -30px;
+}
+@media only screen and (max-width: 600px){
+    .description{
+        margin-left: 10px;
+    }
+}
+.text-about{
+    font-size: 1.4rem;
+}
+.text-file{
+    margin-left: 3rem;
+    font-size: 1.2rem;
+}
+.hr{
+    margin-left: auto;
+    width: 100%;
+    color: red; 
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.mission{
+    font-size: 1.2rem;
+}
+.miss{
+    font-size: 1.4rem;
+    
+}

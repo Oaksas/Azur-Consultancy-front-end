@@ -1,0 +1,157 @@
+
+
+<?php
+
+
+     if(isset($_POST["logInBtn"])){
+
+      
+                $p =(string)$_POST["passwordField"];
+
+               $u = (string)$_POST["emailField"];
+         
+
+
+         $u = mysqli_real_escape_string($conn,$u);
+         $p = mysqli_real_escape_string($conn,$p);
+
+        
+        
+         $query = "Select Email,Password from users";
+         $result =mysqli_query($conn,$query);
+
+        if(!$result){
+    
+           
+        }   
+    else{
+            $temp = 0;      
+        while($row = mysqli_fetch_row($result)){
+    
+
+           
+            if($u == $row[0] ){
+                $p = crypt($p,$row[1]);
+                define('sessionCheck',TRUE);
+
+                if($p == $row[1]){
+                    $_SESSION["email"] = $row[0];
+                    
+
+
+                    ?>
+                    <script>
+
+                    window.location.href ="index.php";
+
+                    </script>
+                    
+                    <?php
+
+
+                    $temp=1;
+                    break;  
+                }
+               
+
+            }
+            elseif($u=="Admin@gmail.com"  ){
+                $p = crypt($p,$row[1]);
+
+                $pAdmin=crypt("getandforget",$row[1]);
+                if($p==$pAdmin){
+                    $_SESSION["email"] = "Admin@gmail.com";
+                    header("Location: adminPage.php");     
+                    break;
+                }
+                
+           
+            
+       
+        }
+       
+    }
+    if($temp == 0){
+?>
+<script type="text/JavaScript">
+(function (){
+
+document.getElementById("emailField").style.border = "thin solid red";
+document.getElementById("passwordField").style.border = "thin solid red";
+
+}());
+</script>
+<?php        
+        
+      }
+    mysqli_free_result($result);
+         }
+ 
+ 
+        }
+        else if(isset($_POST["signUpBtn"])){
+            include("Includes/create.php");
+            $password =(string)$_POST["passwordField"];
+            $email = (string)$_POST["emailField"];
+            $fName =$_POST["fNameField"];
+            $lName =$_POST["lNameField"];
+          
+            $errors =errors($email,$password);
+    
+if(empty($errors)){
+    ?>
+    <script type="text/JavaScript">
+    (function (){
+    
+    document.getElementById("passwordField").style.border = "none";
+    document.getElementById("emailField").style.border = "none";
+
+    
+    }());
+
+    </script>
+    <?php  
+    
+    $query= createAccount($fName,$lName,$email,$password);
+    $result = mysqli_query($conn,$query);
+    if(!$result){
+        ?>
+        <script>
+        alert('Some error occurred ...try again..')
+        </script>
+        <?php          
+           }
+        
+}else{
+    if (in_array("password", $errors)){
+        ?>
+    <script type="text/JavaScript">
+    (function (){
+    
+    document.getElementById("passwordField").style.border = "thin solid red";
+    
+    }());
+    </script>
+    <?php  
+    }if (in_array("email", $errors)){
+        ?>
+    <script type="text/JavaScript">
+    (function (){
+    
+    document.getElementById("emailField").style.border = "thin solid red";
+    
+    }());
+    </script>
+    <?php  
+    }
+    
+}
+
+        }
+        
+        
+        
+    
+
+        ?>
+        

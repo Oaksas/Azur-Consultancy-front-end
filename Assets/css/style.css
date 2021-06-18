@@ -1,0 +1,384 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap');
+
+/* for the drop downs */
+
+/*  univerity drop down */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Hammersmith One', sans-serif;
+    background-color: rgb(231, 231, 230);
+
+
+
+
+}
+.inspireBody{
+    min-height:100%;
+    background:linear-gradient(0deg, rgba(88, 86, 88, 0.3), rgba(46, 45, 46, 0.6)), url("../Images/contactBack.jpg");
+    background-size:cover;
+
+
+}
+
+.navbar ul li{
+
+padding-right: 20px;
+padding-bottom: 0;
+
+}
+
+.navbar{
+    z-index: 1000;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#nav{
+margin-bottom: 100px;
+}
+.menu-area{
+    position: static;
+    font-family: 'Hammersmith One', sans-serif;
+
+}
+
+#topUi li{
+    background-color: rebeccapurple;
+}
+
+
+
+#AAU{
+    background-image: url("../Images/AddisAbabaUniversity.jpeg");
+    background-size: cover;
+}
+
+.panel-default>.panel-heading a[aria-expanded="true"]:after {
+    content: "\2212";
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  
+
+
+
+.drop-down-links{
+    position: absolute;
+    margin-left: 10rem;
+    background-color: #f4f6f8;
+    font-size: 0.9rem;
+    font-family: 'Times New Roman', Times, serif
+}
+/* ellipsis */
+
+
+#logoinBtn{
+    width: min-content;
+
+}
+#loginBtn:hover{
+    border: none;
+    width: max-content;
+
+}
+#signupBtn:hover{
+    color:black;
+    background-color: white;
+}
+.middleSizedFonts{
+    font-size: 22px;
+}
+
+.dropdown-toggle::after {
+    border: none!important;
+    font-family: "Font Awesome 5 Free"; font-weight: 400; content: " ᨆ";
+    vertical-align: 0; /* to center vertically */
+  }
+#ellipsis::after {
+    border: none!important;
+    font-family: "Font Awesome 5 Free"; font-weight: 400; content: " ";
+    vertical-align: 0; /* to center vertically */
+  }
+
+ 
+
+
+
+/* for the nav part */
+.dropdown:hover>.dropdown-menu{
+    display: block;
+  }
+.drop-down-links1{
+    background-color: #f4f6f8;
+}
+.drop-down-links1 a{
+    color: #474343;
+    font-size: 0.9rem;
+    font-family: 'Times New Roman', Times, serif
+}
+.drop-down-links1 a:hover{
+     color:#000000;
+}
+.drop-down-links a{
+    color: #474343;
+    font-size: 0.9rem;
+    font-family: 'Times New Roman', Times, serif
+}
+.drop-down-links a:hover{
+     color:#000000;
+}
+/* for the drop down pages and links */
+.drop-down-page a{
+    text-decoration: none;
+    color: #757272 !important;
+}
+.drop-down-page a:hover{
+    text-decoration: none;
+    color:#000000 !important;
+}
+.drop-header{
+    color: #000000;
+}
+
+
+
+
+/* #card1:hover{
+    color: rgb(156, 129, 199) !important;
+} */
+.card{
+    background-color:#f4f6f8;
+}
+
+.inner-cards{
+    background-color: #ffffff;
+}
+
+.addis_card{
+    font-family: 'Source Code Pro', monospace;
+    color: rgb(66, 42, 71) !important;
+}
+.marks{
+    font-family: 'Source Serif Pro', serif;
+}
+.try{
+    background-color: #fff;
+    margin-left: 110px !important;
+}
+.container_one{
+    background-color:#f4f6f8;
+    border-radius: 20px;
+}
+.pra{
+    visibility: hidden;
+}
+
+/* for the footer */
+.footer{
+    margin-bottom: -999px; 
+}
+.fab:hover
+{
+color: rgb(100, 197, 113);
+}
+a{
+    text-decoration: none;
+
+}
+#email{
+    text-decoration: none;
+    color: #adaba1;
+}
+
+.footer_link{
+    font-size: 0.9rem;
+}
+.footer_link a{
+    text-decoration: none;
+    color: #e7f0e7 !important;
+}
+.footer_header{
+    color: rgb(167, 165, 159);
+    font-size: 1rem;
+}
+
+
+
+/* the blog */
+
+
+
+.univ-container{
+    background-color: rgb(241, 239, 239);
+}
+.app-btn:hover {
+    transform:scale(1.08,1.08);
+    -webkit-transform:scale(1.08,1.08);
+    -moz-transform:scale(1.08,1.08);
+    background-color: rgb(84, 160, 84) ;
+}
+.blog-univ img{
+    height: 5rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.blog-univ h6{
+    font-weight: bold;
+}
+.blog-univ p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.61);
+    line-height: 1.5rem;
+}
+.blog-univ a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.61);
+}
+.blog-univ a:hover{
+    text-decoration: underline;
+    color: rgba(0, 0, 0, 0.61);
+}
+.featured h6{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.featured img{
+    width: 90%;
+    height: 10rem;
+    color: black;
+    font-weight: bold;
+}
+.featured a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(95, 92, 92);
+}
+.featured a:hover{
+    text-decoration: underline;
+    font-weight: bold;
+    color: rgb(95, 92, 92);
+}
+
+.tech img{
+    width: 83%;
+    height: 6rem;
+}
+iframe{
+    width: 100%;
+    height: 14rem;
+}
+hr{
+    color: rgb(156, 155, 155);
+}
+iframe:hover{
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transform:scale(1.06,1.06);
+    transition-delay: 0.0002ms;
+}
+.resources{
+    background-color: rgb(235, 231, 231);
+}
+.resources .btn{
+    border: 0.13em solid rgb(110, 108, 108);
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+}
+.resources .btn:hover{
+    border: 0.13em solid rgb(80, 150, 216);
+}
+.fas{
+    color: rgb(47, 137, 221);
+}
+
+
+/* for the question and answer */
+
+.btn-qa{
+    float: right;
+    border-radius: 5%;
+}
+.btn-qa:hover{
+    float: right;
+    background-color: rgb(47, 137, 221);
+}
+.show-hide{
+    float: right;
+}
+.hide-content{
+    background-color: rgb(235, 231, 231);
+}
+/*CollegeList*/
+
+#listImg {
+    max-height: 200px;
+}
+#cover {
+    max-height: 200px;
+}
+.header{
+    font-weight: 600;
+}
+
+/*Q AND A*/
+#individualQuestion{
+    background-color: rgb(206, 206, 212);
+    
+}
+
+.btn-qa{
+    float: right;
+    border-radius: 5%;
+}
+.btn-qa:hover{
+    float: right;
+    background-color: rgb(47, 137, 221);
+}
+.show-hide{
+    float: right;
+}
+.hide-content{
+    background-color: rgb(235, 231, 231);
+}
+
+/*Calculate chance CSS*/
+.card-file{
+    width: 100%;
+}
+.theForm{
+    font-size: 1.5rem;
+    background-color: #e6e1e1;
+    color: #1f1929;
+}
+
+
+
+.displayValue{
+    border: 0.1rem solid rgb(228, 209, 209);
+    border-radius: 4;
+    font-size: 1.5rem;
+}
+
+
+.description{
+    color: black;
+}
+#calList1{
+list-style: none;
+}
+#calList1 li {
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+
+  /* comment section style */
+  textarea{
+      resize: none;
+  }
